@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ирина">
+    <meta name="description" content="Сайт Tajem">
+    <meta name="keywords" content="веб-разработка, HTML, CSS">
+    <meta name="version" content="1.0">
+    <link rel="icon" href="./images/star.png" type="image/png">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="overlay">
-        <div class="burger_menu">
-            <div class="logo">
-                <img class="logo" src="./images/logo.png" alt="logo">
-            </div>
+    <input type="checkbox" id="loading-checkbox">
+    <label for="loading-checkbox" id="loading-label">
+        <div id="loading-screen">
+            <img src="./images/loading.gif" alt="loading">
+        </div>
+    </label>
 
-            <a href="">Home</a>
-            <a href="#about">About</a>
-            <a href="#expertise">Expertise</a>
-            <a href="#teams">Teams</a>
-            <a href="#works">Works</a>
-            <a href="#people_say">People Say</a>
-            <a href="#footer">Contact</a>
+    <div class="overlay">
+        <div class="burger-menu">
+            <div class="logo">
+                <img src="./images/logo.png" alt="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#teams">Teams</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#people_say">People Say</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
         </div>
 
         <div class="text">
@@ -33,7 +46,7 @@
             </p>
 
             <div class="home_btn">
-                <button class="btn">Learn more</button>
+                <a href="#" class="btn">Learn more</a>
             </div>
 
             <div class="owl">
@@ -42,6 +55,14 @@
                 <div class="owl_dot"></div>
             </div>
         </div>
+    </div>
+
+    <div id="scroll-to-bottom" onclick="window.scrollTo(0, document.body.scrollHeight)">
+        <img src="./images/up_arrow.png" alt="arrow_to_down">
+    </div>
+
+    <div id="scroll-to-top" onclick="window.scrollTo(0, 0)">
+        <img src="./images/arrow_to_down.png" alt="up_arrow">
     </div>
 
     <div id="about">
@@ -60,7 +81,7 @@
             </p>
 
             <div class="about_btn">
-                <button class="btn">Learn more</button>
+                <a href="#" class="btn">Learn more</a>
             </div>
         </div>
     </div>
@@ -150,7 +171,7 @@
         </div>
 
         <div class="about_btn">
-            <button class="btn">Learn more</button>
+            <a href="#" class="btn">Learn more</a>
         </div>
     </div>
 
@@ -171,24 +192,24 @@
                 <p class="name_text">CEO TENGKUREP</p>
     
                 <div class="carousel-container">
-                    <div class="arrows">
-                        <span onclick="zoomIn('test1')">
-                            <img src="./images/arrow2.png" alt="arrow2" class="arrow">
-                        </span>
-                    </div>
-    
+                    <input type="radio" name="slider" id="slide1" class="slide-input" checked>
+                    <input type="radio" name="slider" id="slide2" class="slide-input">
+                    <input type="radio" name="slider" id="slide3" class="slide-input">
+                
+                    <label for="slide2" class="prev-arrow">
+                        <img src="./images/arrow2.png" alt="arrow2" class="arrow">
+                    </label>
+                
                     <div class="images">
                         <img src="./images/person1.png" alt="person1" class="people" id="test1">
                         <img src="./images/person2.png" alt="person2" class="people" id="test2">
                         <img src="./images/person1.png" alt="person1" class="people" id="test3">
                     </div>
-                    
-                    <div class="arrows">
-                        <span onclick="zoomOut('test1')">
-                            <img src="./images/arrow.png" alt="arrow" class="arrow">
-                        </span>
-                    </div>
-                </div>
+                
+                    <label for="slide2" class="next-arrow">
+                        <img src="./images/arrow.png" alt="arrow" class="arrow">
+                    </label>
+                </div>                                                                                                     
             </div>
         </div>
     </div>    
@@ -225,8 +246,10 @@
         </div>
 
         <div class="contact-btn">
-            <a href="./message/message.html" class="contact_btn">SUBMIT</a>
-        </div>    
+            <a href="./message/message.html">
+                <button class="contact_btn">SUBMIT</button>
+            </a>
+        </div>            
     </div>
 </body>
 </html>
